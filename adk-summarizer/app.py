@@ -13,7 +13,7 @@ if not API_KEY:
 genai.configure(api_key=API_KEY)
 
 # 2. Initialization: Using Flash for speed and efficiency
-model = genai.GenerativeModel('gemini-1.5-flash-latest')
+model = genai.GenerativeModel('gemini-2.0-flash-001')
 
 # 3. The HTTP Endpoint: The hackathon requires the agent to be callable
 @app.route('/', methods=['GET'])
