@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # 6. Expose the port Cloud Run expects
-EXPOSE 5000
+EXPOSE 8000
 
 # 7. Command to run the application using Gunicorn (production server)
 CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:app
