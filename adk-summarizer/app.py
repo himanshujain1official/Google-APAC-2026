@@ -16,6 +16,13 @@ genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # 3. The HTTP Endpoint: The hackathon requires the agent to be callable
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({
+        "status": "online", 
+        "agent": "ADK Summarizer", 
+        "message": "Send a POST request to /summarize with a JSON payload containing a 'text' field."
+    }), 200
 @app.route('/summarize', methods=['POST'])
 def summarize_text():
     try:
