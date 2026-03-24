@@ -7,7 +7,7 @@ app = Flask(__name__)
 # 1. Configuration: Grab the API key from environment variables (Required for Cloud Run)
 API_KEY = os.environ.get("GEMINI_API_KEY")
 if not API_KEY:
-    # Fallback for local testing only. Remove or leave blank for production!
+    # Fallback for local testing only. Remove for production!
     API_KEY = "YOUR_LOCAL_TESTING_API_KEY" 
 
 genai.configure(api_key=API_KEY)
