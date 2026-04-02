@@ -10,10 +10,8 @@ if not API_KEY:
     # Fallback for local testing only. Remove for production!
     API_KEY = "YOUR_LOCAL_TESTING_API_KEY" 
 
-genai.configure(api_key=API_KEY)
-
 # 2. Initialization: Using Flash for speed and efficiency
-model = genai.GenerativeModel('gemini-2.0-flash-001')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # 3. The HTTP Endpoint: The hackathon requires the agent to be callable
 @app.route('/', methods=['GET'])
